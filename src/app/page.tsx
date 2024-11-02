@@ -5,17 +5,13 @@ import Projects from "@/components/Projects";
 import Socials from "@/components/Socials";
 import { Button } from "@/components/ui/Button";
 import { getPosts } from "@/lib/posts";
-import {
-  ArrowDownRight,
-  ArrowRightIcon,
-  FileDown
-} from "lucide-react";
+import { ArrowDownRight, ArrowRightIcon, FileDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import path from "path";
 
 const blogDirectory = path.join(process.cwd(), "content");
-const TED_BIRTH_YEAR = 1997;
+const JESSE_BIRTH_YEAR = 1993;
 const LIMIT = 2; // max show 2
 
 export default async function Home() {
@@ -23,42 +19,43 @@ export default async function Home() {
 
   return (
     <article className="mt-8 flex flex-col gap-16 pb-16">
-      <section className="flex flex-col items-start gap-8 md:flex-row-reverse md:items-center md:justify-between">
-        <Image
-          className="rounded-lg"
-          src="/ted.jpg"
-          alt="Photo of Ted"
-          width={175}
-          height={175}
-          priority
-        />
-        <div className="flex flex-col">
-          <h1 className="title text-5xl">hi ted here 👋</h1>
-          <p className="mt-4 font-light">
-            {/* Update my age */}
-            {new Date().getFullYear() - TED_BIRTH_YEAR}
-            -year-old <s>game</s> software developer from Singapore 🇸🇬
-          </p>
-          <p className="mt-2 font-light">
-            I like to develop full-stack, drink instant coffee and get coding
-            advice from my cat,{" "}
-            <Link
-              href="https://www.instagram.com/gomugomu.cat"
-              target="_blank"
-              className="link font-semibold"
-            >
-              Luffy.
-            </Link>
+      <section className="flex flex-col items-start gap-12 md:flex-row md:items-center md:justify-between">
+        <div className="relative">
+          <span className="absolute -right-2 -top-2 text-3xl">🇬🇭</span>
+          <Image
+            className="rounded-full border-4 border-primary/10 shadow-lg transition-all hover:border-primary/30"
+            src="/jesse.jpg"
+            alt="Photo of Jesse"
+            width={240}
+            height={240}
+            priority
+          />
+        </div>
+        <div className="flex max-w-2xl flex-col">
+          <h1 className="title bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-6xl font-bold text-transparent">
+            Hi, I&apos;m Jesse 👋
+          </h1>
+          <p className="mt-4 text-xl font-light">Full Stack Developer</p>
+          <p className="mt-2 text-base font-light leading-relaxed text-muted-foreground">
+            I&apos;m passionate about solving complex problems through elegant
+            code. With expertise in AI and full-stack development, I build
+            scalable solutions that make a real impact. Currently focused on
+            leveraging technology to enhance education in Africa.
           </p>
           <div className="mt-4 flex items-end gap-1">
-            <p className="font-semibold">Ask the chatbot anything about me</p>
-            <ArrowDownRight className="size-5 animate-bounce" />
+            <p className="text-sm font-semibold">
+              Ask me anything about my work
+            </p>
+            <ArrowDownRight className="size-4 animate-bounce" />
           </div>
-          <section className="mt-8 flex items-center gap-8">
+          <section className="mt-6 flex items-center gap-6">
             <Link href="/resume.pdf" target="_blank">
-              <Button variant="outline">
+              <Button
+                variant="outline"
+                className="transition-colors hover:scale-105 hover:bg-primary/10"
+              >
                 <span className="font-semibold">Resume</span>
-                <FileDown className="ml-2 size-5" />
+                <FileDown className="ml-2 size-4" />
               </Button>
             </Link>
             <Socials />

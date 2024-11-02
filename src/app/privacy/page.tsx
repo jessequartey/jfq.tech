@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const lastUpdated = "Sep 2024";
+const lastUpdated = "October 2024";
 
 export default function page() {
   return (
@@ -10,11 +10,12 @@ export default function page() {
         <p>Last Updated: {lastUpdated}</p>
       </div>
       <div className="space-y-4">
-        <h2 className="title text-3xl">Hey, Welcome!</h2>
+        <h2 className="title text-3xl">Welcome!</h2>
         <p>
-          Thanks for stopping by! This <b>Privacy Policy</b> is just here to let
-          you know how things work around here. My website is mainly about
-          showcasing my work, and I&apos;m all about respecting your privacy.
+          Thank you for visiting! This <b>Privacy Policy</b> outlines how your
+          information is handled on my portfolio website. As a developer based
+          in Elmina, Ghana, I&apos;m committed to protecting your privacy while
+          showcasing my work.
         </p>
         <h2 className="title">What Information I Collect (Hint: Not Much)</h2>
         <p>
@@ -25,9 +26,9 @@ export default function page() {
         </p>
         <h3>1. Chatbot Conversations</h3>
         <p>
-          If you send a message through the chatbot, it might be stored for
-          caching and training purposes. So please avoid sharing any
-          confidential info in the chat.
+          When interacting with Naa AI or the site&apos;s chatbot, messages may
+          be stored for caching and training purposes. Please avoid sharing
+          sensitive or confidential information in these conversations.
         </p>
         <h3>2. Contact Info</h3>
         <p>
@@ -63,11 +64,11 @@ export default function page() {
         </p>
         <h2 className="title">Got Questions?</h2>
         <p>
-          If you have any questions, concerns, or just want to say hi, drop me
-          an email at{" "}
-          <Link href="mailto:hello@tedawf.com">hello@tedawf.com</Link> or use
-          the <Link href="/contact">contact form</Link>. I&apos;d love to hear
-          from you!
+          If you have any questions about this privacy policy or would like to
+          discuss potential collaborations, feel free to reach out via email at{" "}
+          <Link href="mailto:hello@jfq.tech">hello@jfq.tech</Link> or through
+          the <Link href="/contact">contact form</Link>. I look forward to
+          connecting with you!
         </p>
       </div>
     </article>

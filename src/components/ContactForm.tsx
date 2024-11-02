@@ -77,7 +77,7 @@ export default function ContactForm() {
         <div className="h-32 sm:col-span-2">
           <Textarea
             rows={4}
-            placeholder="Leave feedback about the site, career opportunities or just to say hello etc."
+            placeholder="Share your project ideas, collaboration opportunities, or just say hello!"
             autoComplete="Message"
             className="resize-none"
             {...register("message")}
@@ -107,10 +107,29 @@ export default function ContactForm() {
           )}
         </Button>
         <p className="mt-4 text-xs text-muted-foreground">
-          By submitting this form, I agree to the{" "}
-          <Link href="/privacy" className="link font-semibold">
-            privacy&nbsp;policy.
-          </Link>
+          You can also reach me directly at{" "}
+          <a href="mailto:hello@jfq.tech" className="link font-semibold">
+            hello@jfq.tech
+          </a>{" "}
+          or connect with me on{" "}
+          <a
+            href="https://www.linkedin.com/in/jessequartey/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link font-semibold"
+          >
+            LinkedIn
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://github.com/jessequartey"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link font-semibold"
+          >
+            GitHub
+          </a>
+          .
         </p>
       </div>
     </form>
